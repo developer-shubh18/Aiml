@@ -9,7 +9,6 @@ A complete machine learning system for detecting spam emails using various class
 - **Feature Extraction**: TF-IDF vectorization for optimal feature representation
 - **Model Evaluation**: Comprehensive performance metrics and visualizations
 - **Interactive Prediction**: Test the model with custom messages
-- **Web Interface**: Simple web app for real-time spam detection
 - **Model Persistence**: Save and load trained models
 
 ## 📋 Requirements
@@ -23,7 +22,6 @@ A complete machine learning system for detecting spam emails using various class
   - scikit-learn
   - nltk
   - wordcloud
-  - flask (for web interface)
   - jupyter (for notebook)
 
 ## 🛠️ Installation
@@ -73,27 +71,7 @@ label,text
    - Compare model performance
    - Test predictions interactively
 
-### Option 2: Python Script
-
-1. **Run the complete script**:
-   ```bash
-   python complete_spam_detection.py
-   ```
-
-2. **Follow the interactive prompts** to test predictions
-
-### Option 3: Web Interface
-
-1. **First, train a model** using either the notebook or script
-
-2. **Start the web server**:
-   ```bash
-   python web_interface.py
-   ```
-
-3. **Open your browser** and go to: `http://localhost:5000`
-
-4. **Enter email messages** to get real-time spam/ham predictions
+3. **Enter email messages** to get real-time spam/ham predictions
 
 ## 📈 Model Performance
 
@@ -130,22 +108,6 @@ Each model is evaluated using:
 - Stratified sampling to maintain class balance
 - 5-fold cross-validation
 - Hyperparameter optimization
-
-## 📁 File Structure
-
-```
-Spam email detection/
-├── Complete_Email_Spam_Detection.ipynb  # Main Jupyter notebook
-├── complete_spam_detection.py           # Complete Python script
-├── web_interface.py                     # Flask web interface
-├── requirements.txt                     # Python dependencies
-├── README.md                           # This file
-├── models/                             # Saved models directory
-│   ├── best_spam_detector_*.pkl        # Best performing model
-│   ├── spam_detector_*.pkl             # All trained models
-│   └── preprocessing_info.txt          # Preprocessing instructions
-└── combined_data.csv                   # Dataset (if available)
-```
 
 ## 🎮 Interactive Features
 
@@ -189,25 +151,6 @@ models['New Model'] = Pipeline([
 ### Adjusting Preprocessing
 Modify the `preprocess_text` function to change text preprocessing steps.
 
-### Changing Features
-Adjust TfidfVectorizer parameters:
-- `max_features`: Maximum number of features
-- `ngram_range`: N-gram range (e.g., (1,2) for unigrams and bigrams)
-- `min_df`: Minimum document frequency
-- `max_df`: Maximum document frequency
-
-## 🚀 Deployment
-
-### Local Deployment
-Use the included Flask web interface for local testing.
-
-### Production Deployment
-For production deployment, consider:
-- Using a production WSGI server (e.g., Gunicorn)
-- Adding authentication and rate limiting
-- Implementing model monitoring and retraining
-- Using a more robust database for logging
-
 ## 📝 Example Usage
 
 ```python
@@ -235,9 +178,6 @@ Feel free to contribute by:
 - Adding more evaluation metrics
 - Improving documentation
 
-## 📄 License
-
-This project is open source and available under the MIT License.
 
 ## 🙏 Acknowledgments
 
